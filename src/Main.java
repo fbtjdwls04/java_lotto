@@ -42,10 +42,14 @@ public class Main{
 				}
 				if(i < 6) {
 					answer[num] = 1;
-					System.out.printf("%2d ",num);
 				}
 				else {
 					bonusN = num;
+				}
+			}
+			for(int i = 1; i < 46; i++) {
+				if(answer[i] == 1) {
+					System.out.printf("%2d ",i);
 				}
 			}
 			System.out.println("보너스번호 : " + bonusN);
@@ -63,12 +67,16 @@ public class Main{
 						continue;
 					}
 					arr[num] = 1;
-					System.out.printf("%2d ",num);
 					if(answer[num] == 1) {
 						cnt++;
 					}
 					if(bonusN == num) {
 						bonusCheck = true;
+					}
+				}
+				for(int i = 1; i < 46; i++) {
+					if(arr[i] == 1) {
+						System.out.printf("%2d ",i);
 					}
 				}
 				if(cnt == 3) {
